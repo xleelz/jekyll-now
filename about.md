@@ -4,12 +4,8 @@ title: About
 permalink: /about/
 ---
 
-Some information about you!
-
-### More Information
-
-A place to include any other types of information that you'd like to include about yourself.
+Hi. I'm a Senior Click-Clack Enthusiast at Dodge Stores. I love programming, practicing martial arts, learning, and making an about page sound like a bad dating profile.
 
 ### Contact me
 
-[email@domain.com](mailto:email@domain.com)
+Email: [xleelz@gmail.com](mailto:xleelz@gmail.com)
