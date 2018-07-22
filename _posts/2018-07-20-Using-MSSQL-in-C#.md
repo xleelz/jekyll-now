@@ -3,7 +3,7 @@ layout: post
 title: Using MSSQL in C# Part 1 - Basic Connection
 ---
 
-##Spoilers
+## Spoilers
 
 This tutorial is meant for people with prior database knowledge and the basic knowledge that languages connecting to a database through a database driver.
 
