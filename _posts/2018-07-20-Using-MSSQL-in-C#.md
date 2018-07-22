@@ -16,7 +16,7 @@ It turns out, C# has a default namespace ```csharp System.Data.SqlClient``` that
 
 Not a lot of C# tutorials include the boilerplate required to start the program. I'm a beginner, so it's good practice for me:
 
-```csharp
+{% highlight csharp %}
 using System;
 using System.Data.SqlClient;
 
@@ -29,7 +29,7 @@ namespace Application {
         }
     }
 }
-```
+{% endhighlight %}
 
 This should get us started.
 
@@ -44,13 +44,13 @@ A Connection string is a string used to connect to a database through a database
 
 
 A typical connection string in C# will look something like this: 
-```csharp
+{% highlight csharp %}
 string connString = @"Data Source=[Server URL]; 
                         Initial Catalog=[Database name]; 
                         Integrated Security=[Integrated Security]; 
                         User ID=[Your Database User ID]; 
                         Password=[Your Database Password]";
-```
+{% endhighlight %}
 
 - **Data Source:** The url or ip address of the database server you are trying to connect to
 - **Initial Catalog:** The name of the database you are trying to connect to
@@ -63,7 +63,7 @@ string connString = @"Data Source=[Server URL];
 
 
 Now, We can add a ```using``` statement to our code and use the ```SqlConnect``` and ```SqlCommand``` classes:
-```csharp
+{% highlight csharp %}
 using System;
 using System.Data;
 using System.Data.SqlClient;
@@ -106,7 +106,7 @@ namespace Application {
         }
     }
 }
-```
+{% endhighlight %}
 
 ## Summary
 
