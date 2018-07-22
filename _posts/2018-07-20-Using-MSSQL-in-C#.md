@@ -11,8 +11,19 @@ This tutorial is meant for people with prior database knowledge and the basic kn
 
 So, I've recently started learning C# and .NET development. After the very basics, of course, the first thing I really wanted to know was how to fetch data from a database.
 
-It turns out, C# has a default namespace ```csharp System.Data.SqlClient``` that handles connecting to sql.
+It turns out, C# has a default namespace ```System.Data.SqlClient``` that handles connecting to sql.
 <br><br>
+
+
+### Installation
+
+If you do not have SqlClient preinstalled, you can install it with this command:
+
+{% highlight csharp %}
+dotnet add package System.Data.SqlClient --version 4.5.1
+{% endhighlight %}
+<br>
+
 
 Not a lot of C# tutorials include the boilerplate required to start the program. I'm a beginner, so it's good practice for me:
 
