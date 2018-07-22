@@ -77,7 +77,7 @@ namespace Application {
             //Uses the using statement because SqlConnect is a disposable class
             //SqlConnect takes a connection string as it's parameter for connecting
             // to a databse
-            using(SqlConnect conn = new SqlConnect(@"Data Source=localhost;
+            using(SqlConnection conn = new SqlConnection(@"Data Source=localhost;
                                                         Initial Catalog=test;
                                                         Integrated Security=false;
                                                         User ID=user;
