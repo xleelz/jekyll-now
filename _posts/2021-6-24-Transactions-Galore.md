@@ -35,7 +35,7 @@ The first program we've developed that's extremely helpful with managing this da
 
 The config file holds lists of queries to run against the local SQL Server database. For each of the queries the following json format is defined:
 
-``json
+```js
 [
 	{
 	"ID": "refundalert",
@@ -43,9 +43,7 @@ The config file holds lists of queries to run against the local SQL Server datab
 		"Src": "<Connection String>",
 		"Dest": "<AWS Lambda Endpoint",
 		"SQLQuery": "<Query String>",
-		"UsesParameter": 1, // Boolean. 
-				    // 0 - Does not use local parameter table.
-				    // 1 - Uses local parameter table.
+		"UsesParameter": 1, // Boolean. 0 - Does not use local parameter table. 1 - Uses local parameter table.
 
 		"ParamUpdateSQL": "", // Query to update local parameter table.
 		"Format": {
@@ -58,7 +56,7 @@ The config file holds lists of queries to run against the local SQL Server datab
 
 	// More Queries...
 ]
-``
+```
 
 *Notes:*
   - The Ant executable runs every 1 minute but not all queries need to fetch data every minute. So we list a frequency for each query.
@@ -79,8 +77,10 @@ We use this pattern in many of our transaction queries because often the interne
 
 Occasionally, the server at any given location will have some critical hardware failure. To mitigate this, we have a program that backs up the entire database for a location and send it to an S3 bucket every night. A separate service runs as part of the initial setup of any new server hardware for a location to pull and restore the latest backup of the database from that location.
 
-<br>
+<p></p>
+
 ## Final Thoughts and Future Plans
+
 Using backups and the above process for aggregating and doing work on transaction data, we lose very little if any data about any given transaction that occurs in the face of hardware failures or internet outages at our locations, and most of our business-critical applications built on top of Ant show actionable data in near-realtime to everyone in our organization from our location managers to the CEO.
 
 We have currently put in place programs to aggregate raw transaction data to an S3 bucket using similar methods in a project we call the Transaction Journal in an effort to never loose a piece of any given transaction data. The data will be uploaded and have various asynchronous processes run against it within a minute of any given transaction occurring. A beta version is already pushed out to all locations and collecting a lot of data. We've also included configurable limitations on the number of transactions to process and send across the internet to preserve some of the precious bandwidth and system resources at some locations.
